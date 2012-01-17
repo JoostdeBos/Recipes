@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  instructions: MyString
+  post_id: 1
+  preperation_time: 2012-01-17 14:41:28
+  course: MyString
+
+two:
+  name: MyString
+  instructions: MyString
+  post_id: 1
+  preperation_time: 2012-01-17 14:41:28
+  course: MyString

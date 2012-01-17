@@ -1,0 +1,29 @@
+<h1>Listing cookbooks</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Post</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cookbooks.each do |cookbook| %>
+  <tr>
+    <td><%= cookbook.user_id %></td>
+    <td><%= cookbook.name %></td>
+    <td><%= cookbook.description %></td>
+    <td><%= cookbook.post_id %></td>
+    <td><%= link_to 'Show', cookbook %></td>
+    <td><%= link_to 'Edit', edit_cookbook_path(cookbook) %></td>
+    <td><%= link_to 'Destroy', cookbook, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cookbook', new_cookbook_path %>
