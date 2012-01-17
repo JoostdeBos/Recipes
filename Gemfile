@@ -7,17 +7,15 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 
-gem 'omniauth-facebook'
+gem 'omniauth-facebook' #https://github.com/mkdynamic/omniauth-facebook
 
-gem 'omniauth-openid'
+gem 'omniauth-openid' #https://github.com/intridea/omniauth-openid
 
-gem 'omniauth-twitter'
+gem 'omniauth-twitter' #https://github.com/arunagw/omniauth-twitter
 
-gem 'omniauth-identity'
+gem 'omniauth-identity' #https://github.com/intridea/omniauth-identity
 
-gem 'nifty-generators'
-
-gem 'rails-backbone'
+gem 'rails-backbone' #https://github.com/codebrew/backbone-rails
 
 # Gems used only for assets and not required
 # in production environments by default.
