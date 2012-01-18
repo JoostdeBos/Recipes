@@ -1,0 +1,21 @@
+<div class="topbar" data-scrollspy="scrollspy">
+	<% if current_user %>
+		  <div class="topbar-inner">
+	        <div class="container">
+	          <a class="brand" href="#">Bootstrap</a>
+	          <ul class="nav">
+	            <li><a href="#">Session!</a></li>
+	          </ul>
+	        </div>
+	      </div>
+		<% else %>
+		  		  <div class="topbar-inner">
+	        <div class="container">
+	          <a class="brand" href="#">Bootstrap</a>
+	          <ul class="nav">
+	            <li><a href="#">No session :(</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	<% end %>
+</div>

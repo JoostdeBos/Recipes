@@ -1,0 +1,35 @@
+<h1>Edit recipe</h1>
+
+<form id="edit-recipe" name="recipe">
+  <div class="field">
+    <label for="name"> name:</label>
+    <input type="text" name="name" id="name" value="<%= name %>" >
+  </div>
+
+  <div class="field">
+    <label for="instructions"> instructions:</label>
+    <input type="text" name="instructions" id="instructions" value="<%= instructions %>" >
+  </div>
+
+  <div class="field">
+    <label for="post_id"> post_id:</label>
+    <input type="text" name="post_id" id="post_id" value="<%= post_id %>" >
+  </div>
+
+  <div class="field">
+    <label for="preperation_time"> preperation_time:</label>
+    <input type="text" name="preperation_time" id="preperation_time" value="<%= preperation_time %>" >
+  </div>
+
+  <div class="field">
+    <label for="course"> course:</label>
+    <input type="text" name="course" id="course" value="<%= course %>" >
+  </div>
+
+  <div class="actions">
+    <input type="submit" value="Update Recipe" />
+  </div>
+
+</form>
+
+<a href="#/index">Back</a>
