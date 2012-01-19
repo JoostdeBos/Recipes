@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120118151857) do
+ActiveRecord::Schema.define(:version => 20120119120755) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(:version => 20120118151857) do
     t.string   "name"
     t.string   "instructions"
     t.integer  "post_id"
-    t.time     "preperation_time"
+    t.integer  "preperation_time"
     t.string   "course"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -114,14 +114,6 @@ ActiveRecord::Schema.define(:version => 20120118151857) do
   end
 
   create_table "units", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "provider"
-    t.string   "uid"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,0 +1,11 @@
+Voeg ingredienten toe:
+
+<%= semantic_form_for @recipe do |f| %>
+  <%= f.semantic_fields_for :ingredient do |i| %>
+	 <%= i.inputs do %>
+ 		 <%= i.input :name, :label => "Naam" %>
+ 		 <%= i.input :quantity, :label => "Hoeveelheid" %>
+ 	 <% end %>
+ <% end %>
+  
+<% end %>
