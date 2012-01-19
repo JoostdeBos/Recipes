@@ -25,9 +25,13 @@ Recepten::Application.routes.draw do
 
   resources :recipes
 
+  resources :identities
+
   match "/auth/:provider/callback" => "sessions#create"
 
   match "/signout" => "sessions#destroy", :as => :signout
+
+  match "/signin" => "sessions#new", :as => :signin
 
   root :to => 'recipes#index'
 
