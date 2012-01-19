@@ -1,9 +1,9 @@
 <h1>Listing recipe_pictures</h1>
-
+<div id="picture">
 <table>
   <tr>
-    <th>Url</th>
-    <th>Recipe</th>
+    <th>Picture</th>
+    <th>Recipe ID</th>
     <th>Title</th>
     <th></th>
     <th></th>
@@ -12,7 +12,7 @@
 
 <% @recipe_pictures.each do |recipe_picture| %>
   <tr>
-    <td><%= recipe_picture.url %></td>
+    <td><%= image_tag recipe_picture.image_url(:thumb).to_s %></td>
     <td><%= recipe_picture.recipe_id %></td>
     <td><%= recipe_picture.title %></td>
     <td><%= link_to 'Show', recipe_picture %></td>
@@ -25,3 +25,21 @@
 <br />
 
 <%= link_to 'New Recipe picture', new_recipe_picture_path %>
+
+<h1>Listing recipe_pictures (Backbone)</h1>
+
+<table id="recipic_templ">
+  <tr>
+    <th>Picture</th>
+    <th>Recipe ID</th>
+    <th>Title</th>
+  </tr>
+</table>
+
+</div>
+
+<script id="recipic" type ="text/html">
+<td>{{picture}}</td>
+<td>{{recipe}}</td>
+<td>{{title}}</td>
+</script>

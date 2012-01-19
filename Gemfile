@@ -17,6 +17,10 @@ gem 'omniauth-identity' #https://github.com/intridea/omniauth-identity
 
 gem 'rails-backbone' #https://github.com/codebrew/backbone-rails
 
+gem 'carrierwave' #https://github.com/jnicklas/carrierwave
+
+gem 'rmagick-2.12.0-x86-mswin32', '2.12.0', :path => 'c:/'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

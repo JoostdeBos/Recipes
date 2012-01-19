@@ -1,4 +1,5 @@
 class RecipePicturesController < ApplicationController
+
   # GET /recipe_pictures
   # GET /recipe_pictures.json
   def index
@@ -24,7 +25,7 @@ class RecipePicturesController < ApplicationController
   # GET /recipe_pictures/new
   # GET /recipe_pictures/new.json
   def new
-    @recipe_picture = RecipePicture.new
+    @recipe_picture = RecipePicture.new(params[:recipe_picture])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -45,7 +46,7 @@ class RecipePicturesController < ApplicationController
     respond_to do |format|
       if @recipe_picture.save
         format.html { redirect_to @recipe_picture, notice: 'Recipe picture was successfully created.' }
-        format.json { render json: @recipe_picture, status: :created, location: @recipe_picture }
+        format.json { render json: @recipe_picture, status: :created, location: @image }
       else
         format.html { render action: "new" }
         format.json { render json: @recipe_picture.errors, status: :unprocessable_entity }

@@ -1,3 +1,8 @@
+PATH
+  remote: c:/
+  specs:
+    rmagick-2.12.0-x86-mswin32 (2.12.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -33,6 +38,8 @@ GEM
     ansi (1.4.1)
     arel (2.2.1)
     builder (3.0.0)
+    carrierwave (0.5.8)
+      activesupport (~> 3.0)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
@@ -149,6 +156,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  carrierwave
   coffee-rails (~> 3.1.1)
   jquery-rails
   omniauth-facebook
@@ -157,6 +165,7 @@ DEPENDENCIES
   omniauth-twitter
   rails (= 3.1.3)
   rails-backbone
+  rmagick-2.12.0-x86-mswin32 (= 2.12.0)!
   sass-rails (~> 3.1.5)
   sqlite3
   turn (~> 0.8.3)
