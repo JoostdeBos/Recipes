@@ -9,13 +9,9 @@ gem 'sqlite3'
 
 gem 'omniauth-facebook' #https://github.com/mkdynamic/omniauth-facebook
 
-gem 'omniauth-openid' #https://github.com/intridea/omniauth-openid
-
-gem 'omniauth-twitter' #https://github.com/arunagw/omniauth-twitter
+gem 'omniauth-twitter', :git => 'https://github.com/arunagw/omniauth-twitter.git'
 
 gem 'omniauth-identity' #https://github.com/intridea/omniauth-identity
-
-gem 'rails-backbone' #https://github.com/codebrew/backbone-rails
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 

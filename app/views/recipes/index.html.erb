@@ -1,9 +1,28 @@
-<div id="recipes"></div>
+<h1>Listing Recipes</h1>
 
-<script type="text/javascript">
-  $(function() {
-    // Blog is the app name
-    window.router = new Recepten.Routers.RecipesRouter({recipes: <%= @recipes.to_json.html_safe -%>});
-    Backbone.history.start();
-  });
-</script>
+<table>
+  <tr>
+    <th>Recipe</th>
+    <th>Ingredient</th>
+    <th>Quantity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @recipes.each do |recipe| %>
+  <tr>
+    <td><%= recipe.name %></td>
+    <td><%= recipe.preperation_time %></td>
+    <td><%= recipe.instructions %></td>
+    <td><%= recipe.instructions %></td>
+    <td><%= link_to 'Show', recipe_ingredient %></td>
+    <td><%= link_to 'Edit', edit_recipe_ingredient_path(recipe_ingredient) %></td>
+    <td><%= link_to 'Destroy', recipe_ingredient, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Recipe ingredient', new_recipe_ingredient_path %>
