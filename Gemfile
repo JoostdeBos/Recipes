@@ -17,6 +17,8 @@ gem 'omniauth-identity' #https://github.com/intridea/omniauth-identity
 
 gem 'rails-backbone' #https://github.com/codebrew/backbone-rails
 
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
