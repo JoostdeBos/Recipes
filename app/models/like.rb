@@ -1,7 +1,4 @@
-class Like < Post
-	def self.base_class
-		Like
-	end
-
-	#belongs_to :post, :users
+class Like < ActiveRecord::Base
+	#acts_as :post
+	belongs_to :users
 end

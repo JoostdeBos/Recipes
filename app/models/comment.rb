@@ -1,8 +1,3 @@
-class Comment < Post
-	def self.base_class
-		Comment
-	end
-
-	#belongs_to :posts, :users
-	belongs_to :users
+class Comment < ActiveRecord::Base
+  belongs_to :recipe
 end

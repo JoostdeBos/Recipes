@@ -1,8 +1,4 @@
-class Recipe < Post
-	def self.base_class
-		Recipe
-	end
-
-	#belongs_to :post
- 	has_many :ingredients
+class Recipe < ActiveRecord::Base
+	acts_as :post
+	has_many :comments
 end

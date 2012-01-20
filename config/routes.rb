@@ -29,6 +29,11 @@ Recepten::Application.routes.draw do
 
   match "/signout" => "sessions#destroy", :as => :signout
 
+  # Comments
+  match "/comment/:recipe/" => "comments#new", :as => :comment
+  # We need to be able to edit or delete a comment as well.
+
+  # Root
   root :to => 'recipes#index'
 
   # The priority is based upon order of creation:
