@@ -16,7 +16,7 @@
     <%= f.text_field :message %>
   </div>
   <div class="field">
-    <%= hidden_field_tag :recipe_id, params[:recipe] %>
+    <%= f.hidden_field :recipe_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

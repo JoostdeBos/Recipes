@@ -3,5 +3,4 @@ class Post < ActiveRecord::Base
 	#has_many :likes, :recipes, :comments, :taggings
 	#has_many :taggings
 	has_many :comments
-
 end
