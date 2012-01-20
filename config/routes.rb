@@ -25,15 +25,22 @@ Recepten::Application.routes.draw do
 
   resources :recipes
 
+  resources :identities
+
   match "/auth/:provider/callback" => "sessions#create"
 
   match "/signout" => "sessions#destroy", :as => :signout
 
+<<<<<<< HEAD
   # Comments
   match "/comment/:recipe/" => "comments#new", :as => :comment
   # We need to be able to edit or delete a comment as well.
 
   # Root
+=======
+  match "/signin" => "sessions#new", :as => :signin
+
+>>>>>>> e639704607bdf0da7188041b9ca4a8e8552750c1
   root :to => 'recipes#index'
 
   # The priority is based upon order of creation:
