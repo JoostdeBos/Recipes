@@ -4,7 +4,7 @@
 	        <div class="container">
 	          <a class="brand" href="#">Bootstrap</a>
 	          <ul class="nav">
-	            <li><a href="#">Session!</a></li>
+	            <div class="loggedIn"p>Logged in as <%= current_user.name %> <%= link_to "Log out", signout_path %></div>
 	          </ul>
 	        </div>
 	      </div>
@@ -13,8 +13,7 @@
 	        <div class="container">
 	          <a class="brand" href="#">Bootstrap</a>
 	          <ul class="nav">
-	            <li><%= link_to 'Sign in with Twitter', "auth/twitter" %></li>
-	            <li><%= link_to 'Sign in with Facebook', "auth/facebook" %></li>
+	            <li><%= link_to 'Sign in', signin_path %></li>
 	          </ul>
 	        </div>
 	      </div>
