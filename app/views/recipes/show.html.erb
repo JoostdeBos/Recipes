@@ -25,15 +25,13 @@
   <%= @recipe.course %>
 </p>
 
-<% if !@recipe.comments.blank? %>
-  <% for comment in @recipe.comments %>
-    <li><%= comment.message %></li>
-  <% end %>
-<% else %>
-  
-<% end %>
-	
-<% #end %>
+<p>
+	<b>Bericht toevoegen:</b>
+</p>
+<%= render 'comments/form' %>
+
+
+<%= render @recipe.comments %>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %> |
