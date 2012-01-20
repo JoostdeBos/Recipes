@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(:version => 20120119183543) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", :force => true do |t|
-    t.string   "comment"
-    t.integer  "post_id"
-    t.integer  "user_id"
+   create_table "comments", :force => true do |t|
+    t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "recipe_id"
+    t.integer  "user_id"
   end
 
   create_table "cookbooks", :force => true do |t|
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(:version => 20120119183543) do
   end
 
   create_table "posts", :force => true do |t|
+    t.integer  "postable_id"
+    t.string   "postable_type"
     t.integer  "user_id"
     t.string   "type"
     t.datetime "created_at"
@@ -126,5 +128,4 @@ ActiveRecord::Schema.define(:version => 20120119183543) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
 end
