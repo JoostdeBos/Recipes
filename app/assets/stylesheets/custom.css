@@ -74,3 +74,10 @@ body {
   border-color: #FBC7C6;
   display: table;
 }
+
+.content {
+	-moz-box-shadow: 0px 10px 20px #888;
+	-webkit-box-shadow: 0px 10px 20px #888;
+	box-shadow: 0px 10px 20px #888;
+  	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); 
+}
