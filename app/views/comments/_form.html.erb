@@ -12,16 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_field :comment %>
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
   </div>
   <div class="field">
-    <%= f.label :post_id %><br />
-    <%= f.number_field :post_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.hidden_field :recipe_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
