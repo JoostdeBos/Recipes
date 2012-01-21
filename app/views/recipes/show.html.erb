@@ -11,11 +11,6 @@
 </p>
 
 <p>
-  <b>Post:</b>
-  <%= @recipe.post_id %>
-</p>
-
-<p>
   <b>Preperation time:</b>
   <%= @recipe.preperation_time %>
 </p>
@@ -32,7 +27,7 @@
 <%= render 'comments/form' %>
 
 <% # Listed comments %>
-<%= render @recipe.comments %>
+<%= render @recipe.comments %>s
 
 <% # Action links %>
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
