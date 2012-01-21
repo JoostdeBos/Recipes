@@ -3,7 +3,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  require 'C:\Ruby193\lib\ruby\gems\1.9.1\gems\rmagick-2.12.0-x86-mswin32\lib\RMagick.rb'
   include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
