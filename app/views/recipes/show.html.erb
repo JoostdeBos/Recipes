@@ -20,16 +20,6 @@
   <%= @recipe.course %>
 </p>
 
-<<<<<<< HEAD
-<% <% if !@recipe.items.blank? %>
-  <% for item in @recipe.items %>
-    <li><%= item.name %></li>
-  <% end %>
-<% else %>
-  
-<% end %>
-
-=======
 <% # Add message for logged in users %>
 <p>
 	<b>Bericht toevoegen:</b>
@@ -37,8 +27,7 @@
 <%= render 'comments/form' %>
 
 <% # Listed comments %>
-<%= render @recipe.comments %>
->>>>>>> a874cfd26b044cf0f4449a7dbf552a25bf19c5ce
+<%= render @recipe.comments %>s
 
 <% # Action links %>
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
