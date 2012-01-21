@@ -17,11 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :instructions %><br />
-    <%= f.text_field :instructions %>
-  </div>
-  <div class="field">
-    <%= f.label :post_id %><br />
-    <%= f.number_field :post_id %>
+    <%= f.text_area :instructions %>
   </div>
   <div class="field">
     <%= f.label :preperation_time %><br />
@@ -31,6 +27,12 @@
     <%= f.label :course %><br />
     <%= f.text_field :course %>
   </div>
+  <%= f.fields_for :ingredients do |builder| %>
+    <p>
+      <%= builder.label :item, "Ingredient" %><br />
+      <%= builder.text_field :item, :rows => 3 %>
+    </p>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
