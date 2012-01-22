@@ -27,6 +27,8 @@ Recepten::Application.routes.draw do
 
   resources :identities
 
+  resources :timeline
+
   # Logging in
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
