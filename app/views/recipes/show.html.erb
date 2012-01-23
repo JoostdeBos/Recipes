@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+	<%= link_to image_tag(@recipe.post.user.picture_url, { :height => 35 }), @recipe.post.user %>
+	Recept door <b><%= link_to @recipe.post.user.name, @recipe.post.user %></b>
+</p>
+
+<p>
   <b>Name:</b>
   <%= @recipe.name %>
 </p>
