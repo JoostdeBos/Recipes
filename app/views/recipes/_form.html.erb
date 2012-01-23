@@ -1,27 +1,25 @@
+Voeg een recept toe
+<%= semantic_form_for @recipe do |f| %>
+   <%= f.inputs do %>
+      <%= f.input :name, :label => "Naam" %>
+      <%= f.input :instructions, :label => "Instructies",  :as => :text, :input_html => { :rows => 13 } %>
+      <%= f.input :preperation_time, :label => "Bereidingstijd" %>
+      <%= f.input :course, :label => "Menugang", :as => :select, :collection => ["Amuse", "Voorgerecht", "Hoofdgerecht", "Bijgerecht", "Lunch", "Ontbijt"] %>
+    <% end %>
+    <!--
+      Voeg ingredienten toe:
+       <%= f.semantic_fields_for :ingredient do |i| %>
+         <%= i.inputs do %>
+           <div id="ingredients">
+            <%= i.input :name, :label => "Naam" %>
+            <%= i.input :quantity, :label => "Hoeveelheid" %>
+           </div>
+           <%= link_to_function "Voeg ingredient toe", "addIngredient()" do |page| 
+            page.insert_html :bottom, :ingredients
+           end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :instructions %><br />
-    <%= f.text_area :instructions %>
-  </div>
-  <div class="field">
-    <%= f.label :preperation_time %><br />
-    <%= f.time_select :preperation_time %>
-  </div>
-  <div class="field">
-    <%= f.label :course %><br />
-    <%= f.text_field :course %>
-  </div>
-  <%= f.fields_for :ingredients do |builder| %>
-    <p>
-      <%= builder.label :item, "Ingredient" %><br />
-      <%= builder.text_field :item, :rows => 3 %>
-    </p>
-  <% end %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+          <% end %>
+        <% end %>
+-->
+      <%= f.buttons %>
+    <% end %>
