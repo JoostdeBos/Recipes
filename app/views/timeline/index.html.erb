@@ -1,9 +1,15 @@
 <% @timeline.each do |item| %>
 	<% if item.class.name == 'Comment' %>
-		<%= render 'comment', :item => item %>
+		<div class="update">
+			<%= render 'comment', :item => item %>
+		</div>
 	<% elsif item.class.name == 'Recipe' %>
-		<%= render 'recipe', :item => item %>
+		<div class="update">
+			<%= render 'recipe', :item => item %>
+		</div>
 	<% elsif item.class.name == 'Cookbook' %>
-		<%= render 'cookbook', :item => item %>
+		<div class="update">
+			<%= render 'cookbook', :item => item %>
+		</div>
 	<% end %>
 <% end %>

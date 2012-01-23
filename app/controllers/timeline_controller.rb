@@ -5,7 +5,7 @@ class TimelineController < ApplicationController
   	@comments = Comment.order('created_at desc')
 		@recipes = Recipe.order('created_at desc')
 		@cookbooks = Cookbook.order('created_at desc')
-		@timeline = (@comments + @recipes + @cookbooks).sort_by(&:created_at)
+		@timeline = (@comments + @recipes + @cookbooks).sort_by(&:created_at).reverse
 
     respond_to do |format|
       format.html # index.html.erb

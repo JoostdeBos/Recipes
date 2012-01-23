@@ -1,15 +1,11 @@
-<% unless item.user.nil? %>
-	<div class="timeline-item">
-		<p>
-			<% unless item.user.picture_url.nil? %>
-				<%= link_to image_tag(item.user.picture_url, {:height => 35}), item.user %>
-			<% end %>
-			<b><%= link_to item.user.name, item.user %></b>
-			heeft gereageerd op het recept <b><%= link_to item.recipe.name, item.recipe %></b> van
-			<b><%= link_to item.recipe.post.user.name, item.recipe.post.user %></b>
-		</p>
-		<p style="padding-left: 10px;">
-			<%= item.message %>
-		</p>
+<%= link_to image_tag(item.user.picture_url, {:height => 45}), item.user %>
+<div class="update-content">
+	<div class="update-content-title">
+		<%= link_to item.user.name, item.user %>
+		heeft gereageerd op het recept <%= link_to item.recipe.name.truncate(20), item.recipe %> van
+		<%= link_to item.recipe.post.user.name, item.recipe.post.user %> <span class="time"><%= time_ago_in_words(item.created_at) %> ago</span>
 	</div>
-<% end %>
+	<div class="update-content-text">
+		<%= item.message %>
+	</div>
+</div>

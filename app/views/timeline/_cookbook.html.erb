@@ -1,14 +1,10 @@
-<% unless item.post.user.nil? %>
-	<div class="timeline-item">
-		<p>
-			<% unless item.post.user.picture_url.nil? %>
-				<%= link_to image_tag(item.post.user.picture_url, {:height => 35}), item.post.user %>
-			<% end %>
-			<b><%= item.post.user.name %></b>
-			heeft een nieuw kookboek toegevoegd
-		</p>
-		<p style="padding-left: 10px">
-			<%= item.name %>
-		</p>
+<%= link_to image_tag(item.post.user.picture_url, {:height => 45}), item.post.user %>
+<div class="update-content">
+	<div class="update-content-title">
+		<%= item.post.user.name %>
+		heeft het kookboek <%= link_to item.name, item %> toegevoegd
 	</div>
-<% end %>
+	<div class="update-content-text">
+		<%= item.description unless item.description.empty? %>
+	</div>
+</div>
