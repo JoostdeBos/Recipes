@@ -3,4 +3,4 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 addIngredient: ->
-  document.getElementById("ingredients").innerHTML += "<input type='file' value='' /><br />"
+	
