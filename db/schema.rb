@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120123080259) do
+ActiveRecord::Schema.define(:version => 20120123133926) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -95,10 +95,11 @@ ActiveRecord::Schema.define(:version => 20120123080259) do
     t.string   "name"
     t.string   "instructions"
     t.integer  "post_id"
-    t.time     "preperation_time"
+    t.integer  "preperation_time"
     t.string   "course"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   create_table "taggings", :force => true do |t|

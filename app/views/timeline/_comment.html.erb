@@ -4,9 +4,9 @@
 			<% unless item.user.picture_url.nil? %>
 				<%= image_tag item.user.picture_url, {:height => 35} %>
 			<% end %>
-			<b><%= item.user.name %></b>
-			heeft gereageerd op het recept <b><%= item.recipe.name %></b> van
-			<b><%= item.recipe.post.user.name %></b>
+			<b><%= link_to item.user.name, item.user %></b>
+			heeft gereageerd op het recept <b><%= link_to item.recipe.name, item.recipe %></b> van
+			<b><%= link_to item.recipe.post.user.name, item.recipe.post.user %></b>
 		</p>
 		<p style="padding-left: 10px;">
 			<%= item.message %>

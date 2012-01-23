@@ -4,11 +4,12 @@
 			<% unless item.post.user.picture_url.nil? %>
 				<%= image_tag item.post.user.picture_url, {:height => 35} %>
 			<% end %>
-			<b><%= item.post.user.name %></b>
+			<b><%= link_to item.post.user.name, item.post.user %></b>
 			heeft een nieuw recept toegevoegd
 		</p>
 		<p style="padding-left: 10px">
-			<%= item.name %>
+			<b><%= link_to item.name, item %></b>
+			<% unless item.description.nil? %><%= item.description.truncate(200) %><% end %>
 		</p>
 	</div>
 <% end %>
