@@ -9,10 +9,17 @@ Voeg een recept toe
       Voeg ingredienten toe:
        <%= f.semantic_fields_for :ingredient do |i| %>
          <%= i.inputs do %>
-           <%= i.input :name, :label => "Naam" %>
-           <%= i.input :quantity, :label => "Hoeveelheid" %>
-         <% end %>
+           <div id="ingredients">
+            <%= i.input :name, :label => "Naam" %>
+            <%= i.input :quantity, :label => "Hoeveelheid" %>
+           </div>
+           <%= link_to_function "Voeg ingredient toe", "addIngredient()" do |page| 
+            page.insert_html :bottom, :ingredients
+           end %>
+
+          <% end %>
         <% end %>
+
       <%= f.buttons %>
     <% end %>
 <% end %>
