@@ -39,7 +39,7 @@ Recepten::Application.routes.draw do
   # We need to be able to edit or delete a comment as well.
 
   # Root
-  root :to => 'recipes#index'
+  root :to => 'timeline#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
