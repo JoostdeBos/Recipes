@@ -1,12 +1,10 @@
-<h1>Listing recipes</h1>
+<%= title "Listing Recipes" %>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Instructions</th>
-    <th>Post</th>
-    <th>Preperation time</th>
-    <th>Course</th>
+    <th>Recipe</th>
+    <th>Ingredient</th>
+    <th>Quantity</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,9 +13,8 @@
 <% @recipes.each do |recipe| %>
   <tr>
     <td><%= recipe.name %></td>
-    <td><%= recipe.instructions %></td>
-    <td><%= recipe.post_id %></td>
     <td><%= recipe.preperation_time %></td>
+    <td><%= recipe.instructions %></td>
     <td><%= recipe.course %></td>
     <td><%= link_to 'Show', recipe %></td>
     <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>

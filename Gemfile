@@ -9,13 +9,13 @@ gem 'sqlite3'
 
 gem 'omniauth-facebook' #https://github.com/mkdynamic/omniauth-facebook
 
-gem 'omniauth-openid' #https://github.com/intridea/omniauth-openid
-
-gem 'omniauth-twitter' #https://github.com/arunagw/omniauth-twitter
+gem 'omniauth-twitter', :git => 'https://github.com/arunagw/omniauth-twitter.git'
 
 gem 'omniauth-identity' #https://github.com/intridea/omniauth-identity
 
-gem 'rails-backbone' #https://github.com/codebrew/backbone-rails
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
+
+gem "formtastic-bootstrap", "~> 1.1.2"
 
 gem 'carrierwave' #https://github.com/jnicklas/carrierwave
 
@@ -32,7 +32,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -47,3 +47,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
+
+gem 'acts_as_relation'

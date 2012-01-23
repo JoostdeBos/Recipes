@@ -1,0 +1,101 @@
+html, body {
+	padding-top: 40px;
+	background: transparent url(../images/bg.jpg) left top repeat;
+	background-image: url(../assets/bg.jpg);
+	background-repeat-x: repeat;
+	background-repeat-y: repeat;
+	background-attachment: initial;
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: transparent;
+}
+
+@import 'bootstrap';
+
+
+.topbar h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	color: #BABABA;
+	font-weight: normal;
+	white-space: nowrap;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-o-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+	padding-right: 25px;
+	padding: 0 10px 0 45px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	min-height: 40px;
+	line-height: 40px;
+}
+
+.topbar h2 img {
+	position: absolute;
+	left: 10px;
+	top: 7px;
+	width: 24px;
+	height: 24px;
+}
+
+.current-user {
+	float: right;
+}
+
+.topbar em .btn{
+  color: #000;
+}
+
+.container > footer p {
+  text-align: center; /* center align it with the container */
+}
+.container {
+  width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+}
+
+/* The white background content wrapper */
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -moz-box-shadow: 0px 5px 20px #888;
+ 	-webkit-box-shadow: 0px 5px 20px #888;
+ 	box-shadow: 0px 5px 20px #888;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); 
+}
+
+/* Page header tweaks */
+.page-header {
+  padding: 20px 20px 10px;
+  margin: -20px -20px 20px;
+}
+
+/* Give a quick and non-cross-browser friendly divider */
+.content .span4 {
+  margin-left: 0;
+  padding-left: 19px;
+  border-left: 1px solid #eee;
+}
+
+.actions {
+  padding: 17px 20px 18px 20px;
+}
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.field_with_errors {
+  padding: 2px;
+  background-color: #FDDFDE;
+  border-color: #FBC7C6;
+  display: table;
+}

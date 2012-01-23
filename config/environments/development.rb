@@ -27,4 +27,10 @@ Recepten::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  TWITTER_KEY     = 'WyftOPIxSbrOtHuQhb9GSg'
+  TWITTER_SECRET  = 'vXls1Wxl0iHOmmuEjWVMHOIuUCiqj01oAXzQ77ait3M'
+
+  FACEBOOK_KEY    = '365380450142116'
+  FACEBOOK_SECRET = 'b5387674ae76f44c5ec6bcac4c74ea53'   
 end

@@ -42,14 +42,11 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
-        format.json { render json: @comment, status: :created, location: @comment }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
+    if @comment.save
+      flash[:notice] = "Successfully created comment."
+      redirect_to @comment.recipe
+    else
+      render :action => 'new'
     end
   end
 
@@ -60,7 +57,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to @comment.recipe, notice: 'Comment was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
