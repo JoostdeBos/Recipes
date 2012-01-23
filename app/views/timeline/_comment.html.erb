@@ -1,0 +1,10 @@
+<% unless item.user.nil? %>
+	<p>
+		<b><%= item.user.name.capitalize %></b>
+		heeft gereageerd op het recept <i><%= item.recipe.name %></i> van
+		<b><%= item.recipe.post.user.name.capitalize %></b>
+	</p>
+	<p style="padding-left: 10px;">
+		<%= item.message %>
+	</p>
+<% end %>

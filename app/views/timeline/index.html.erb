@@ -1,1 +1,11 @@
-hallo
+<% @timeline.each do |item| %>
+	<div class="timeline-item">
+		<% if item.class.name == 'Comment' %>
+			<%= render 'comment', :item => item %>
+		<% elsif item.class.name == 'Recipe' %>
+			<%= render 'recipe', :item => item %>
+		<% elsif item.class.name == 'Cookbook' %>
+			<%= render 'cookbook', :item => item %>
+		<% end %>
+	</div>
+<% end %>
