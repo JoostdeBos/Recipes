@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20120123141503) do
 
+
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -50,9 +51,12 @@ ActiveRecord::Schema.define(:version => 20120123141503) do
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.string   "name"
     t.integer  "unit_id"
     t.integer  "category_id"
+=======
+>>>>>>> 6bf3831fb88d127cd42057fa500ef7834f32ce1f
   end
 
   create_table "items", :force => true do |t|
@@ -102,6 +106,7 @@ ActiveRecord::Schema.define(:version => 20120123141503) do
     t.string   "course"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   create_table "taggings", :force => true do |t|

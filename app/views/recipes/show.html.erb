@@ -27,7 +27,7 @@
 <%= render 'comments/form' %>
 
 <% # Listed comments %>
-<%= render @recipe.comments %>s
+<%= render @recipe.comments.where('user_id IS NOT NULL') %>
 
 <% # Action links %>
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

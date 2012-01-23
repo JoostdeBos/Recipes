@@ -1,0 +1,15 @@
+<% unless item.user.nil? %>
+	<div class="timeline-item">
+		<p>
+			<% unless item.user.picture_url.nil? %>
+				<%= link_to image_tag(item.user.picture_url, {:height => 35}), item.user %>
+			<% end %>
+			<b><%= link_to item.user.name, item.user %></b>
+			heeft gereageerd op het recept <b><%= link_to item.recipe.name, item.recipe %></b> van
+			<b><%= link_to item.recipe.post.user.name, item.recipe.post.user %></b>
+		</p>
+		<p style="padding-left: 10px;">
+			<%= item.message %>
+		</p>
+	</div>
+<% end %>
