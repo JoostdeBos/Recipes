@@ -1,8 +1,8 @@
 class DropTableItems < ActiveRecord::Migration
   def up
+  	drop_table :items
   end
 
   def down
-  	drop_table :items
   end
 end
