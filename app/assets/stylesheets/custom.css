@@ -18,7 +18,11 @@ html, body {
 .topbar em {
 	color: #FFF;
 	float: right;
-  padding-top: 5px;
+	display: block;
+}
+
+#topbar-userinfo {
+	margin-top: -10px;
 }
 
 .topbar em .btn{
