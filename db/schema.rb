@@ -11,8 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120123141503) do
-
+ActiveRecord::Schema.define(:version => 20120123133926) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -51,12 +50,6 @@ ActiveRecord::Schema.define(:version => 20120123141503) do
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
-    t.string   "name"
-    t.integer  "unit_id"
-    t.integer  "category_id"
-=======
->>>>>>> 6bf3831fb88d127cd42057fa500ef7834f32ce1f
   end
 
   create_table "items", :force => true do |t|
