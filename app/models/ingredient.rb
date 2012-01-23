@@ -1,4 +1,5 @@
 class Ingredient < ActiveRecord::Base
-	has_one :category, :unit
-	belongs_to :item
+	has_one :category
+	has_one :unit
+	belongs_to :recipe
 end
