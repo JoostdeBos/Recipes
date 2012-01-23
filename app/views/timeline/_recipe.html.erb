@@ -1,0 +1,9 @@
+<% unless item.post.user.nil? %>
+	<p>
+		<b><%= item.post.user.name %></b>
+		heeft een nieuw recept toegevoegd
+	</p>
+	<p style="padding-left: 10px">
+		<%= item.name %>
+	</p>
+<% end %>
