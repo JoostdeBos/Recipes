@@ -6,11 +6,13 @@
 	          <ul class="nav">
 	           <!-- Menu items hier -->
 	          </ul>
-	          <em>
-		          <%= image_tag current_user.picture_url, {:height => 35} %>
-		          Ingelogd als <%= current_user.name %>
-	          	(<%= link_to "Log uit", signout_path %>)
-	          </em> 
+	          <h2 class="current-user">
+		          <%= image_tag current_user.picture_url, {:height => 24} %>
+		          <span class="name">
+			          Ingelogd als <%= current_user.name %>
+		          	(<%= link_to "Log uit", signout_path %>)
+		          	</span>
+	          </h2> 
 	        </div>
 	      </div>
 		<% else %>
