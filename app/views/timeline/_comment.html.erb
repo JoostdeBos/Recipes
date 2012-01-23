@@ -2,7 +2,7 @@
 	<div class="timeline-item">
 		<p>
 			<% unless item.user.picture_url.nil? %>
-				<%= image_tag item.user.picture_url, {:height => 35} %>
+				<%= link_to image_tag(item.user.picture_url, {:height => 35}), item.user %>
 			<% end %>
 			<b><%= link_to item.user.name, item.user %></b>
 			heeft gereageerd op het recept <b><%= link_to item.recipe.name, item.recipe %></b> van
