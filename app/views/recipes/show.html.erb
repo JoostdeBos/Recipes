@@ -25,13 +25,17 @@
   <%= @recipe.course %>
 </p>
 
-<% # Add message for logged in users %>
-<p>
-	<b>Bericht toevoegen:</b>
-</p>
-<%= render 'comments/form' %>
+<% if current_user %>
+	<p>
+		<b>Bericht toevoegen:</b>
+	</p>
+	<%= render 'comments/form' %>
+<% end %>
 
 <% # Listed comments %>
+<p>
+	<b>Comments:</b>
+</p>
 <%= render @recipe.comments.where('user_id IS NOT NULL') %>
 
 <% # Action links %>
