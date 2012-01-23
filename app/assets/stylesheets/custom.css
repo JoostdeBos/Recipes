@@ -15,10 +15,37 @@ html, body {
 @import 'bootstrap';
 
 
-.topbar em {
-	color: #FFF;
+.topbar h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	color: #BABABA;
+	font-weight: normal;
+	white-space: nowrap;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-o-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+	padding-right: 25px;
+	padding: 0 10px 0 45px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	min-height: 40px;
+	line-height: 40px;
+}
+
+.topbar h2 img {
+	position: absolute;
+	left: 10px;
+	top: 7px;
+	width: 24px;
+	height: 24px;
+}
+
+.current-user {
 	float: right;
-  padding-top: 5px;
 }
 
 .topbar em .btn{

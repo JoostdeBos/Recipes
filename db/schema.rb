@@ -12,7 +12,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120119120755) do
+ActiveRecord::Schema.define(:version => 20120123080259) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20120119120755) do
     t.datetime "updated_at"
   end
 
-   create_table "comments", :force => true do |t|
+  create_table "comments", :force => true do |t|
     t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(:version => 20120119120755) do
     t.integer  "postable_id"
     t.string   "postable_type"
     t.integer  "user_id"
-    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -122,14 +121,12 @@ ActiveRecord::Schema.define(:version => 20120119120755) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-=======
   create_table "users", :force => true do |t|
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_url"
   end
->>>>>>> 782f57a24ae7f1d649c825b78c1a6f277c7051c6
 end
