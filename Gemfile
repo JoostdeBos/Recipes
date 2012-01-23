@@ -15,6 +15,8 @@ gem 'omniauth-identity' #https://github.com/intridea/omniauth-identity
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 
+gem "formtastic"
+
 gem "formtastic-bootstrap", "~> 1.1.2"
 
 # Gems used only for assets and not required

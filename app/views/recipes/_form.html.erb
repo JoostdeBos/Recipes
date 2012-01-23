@@ -6,20 +6,20 @@ Voeg een recept toe
       <%= f.input :preperation_time, :label => "Bereidingstijd" %>
       <%= f.input :course, :label => "Menugang", :as => :select, :collection => ["Amuse", "Voorgerecht", "Hoofdgerecht", "Bijgerecht", "Lunch", "Ontbijt"] %>
     <% end %>
-    <!--
       Voeg ingredienten toe:
-       <%= f.semantic_fields_for :ingredient do |i| %>
+       <%= f.semantic_fields_for :ingredients do |i| %>
          <%= i.inputs do %>
            <div id="ingredients">
             <%= i.input :name, :label => "Naam" %>
             <%= i.input :quantity, :label => "Hoeveelheid" %>
            </div>
+          <% end %>
+        <% end %>
+
            <%= link_to_function "Voeg ingredient toe", "addIngredient()" do |page| 
             page.insert_html :bottom, :ingredients
            end %>
-
-          <% end %>
-        <% end %>
--->
-      <%= f.buttons %>
+      <%= f.buttons do %>
+        <%= f.commit_button :button_html => {:class => "primary"} %>
+      <% end %>
     <% end %>
