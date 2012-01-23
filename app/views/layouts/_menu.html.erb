@@ -4,8 +4,15 @@
 	        <div class="container">
 	          <a class="brand" href="#">Recepten</a>
 	          <ul class="nav">
-	            <div class="loggedIn"p>Logged in as <%= current_user.name %> <%= link_to "Log out", signout_path %></div>
+	           <!-- Menu items hier -->
 	          </ul>
+	          <h2 class="current-user">
+		          <%= image_tag current_user.picture_url, {:height => 24} %>
+		          <span class="name">
+			          Ingelogd als <%= current_user.name %>
+		          	(<%= link_to "Log uit", signout_path %>)
+		          	</span>
+	          </h2> 
 	        </div>
 	      </div>
 		<% else %>
@@ -13,8 +20,10 @@
 	        <div class="container">
 	          <a class="brand" href="#">Bootstrap</a>
 	          <ul class="nav">
-	            <li><%= link_to 'Sign in', signin_path %></li>
 	          </ul>
+	          <h2 class="current-user">
+	          	<%= link_to 'Sign in', signin_path %>
+	          </h2>
 	        </div>
 	      </div>
 	<% end %>
