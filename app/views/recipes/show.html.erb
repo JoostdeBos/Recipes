@@ -11,11 +11,6 @@
 </p>
 
 <p>
-  <b>Post:</b>
-  <%= @recipe.post_id %>
-</p>
-
-<p>
   <b>Preperation time:</b>
   <%= @recipe.preperation_time %>
 </p>
@@ -25,6 +20,16 @@
   <%= @recipe.course %>
 </p>
 
+<% # Add message for logged in users %>
+<p>
+	<b>Bericht toevoegen:</b>
+</p>
+<%= render 'comments/form' %>
 
+<% # Listed comments %>
+<%= render @recipe.comments %>s
+
+<% # Action links %>
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+<%= link_to 'Back', recipes_path %> |
+<%= link_to 'Comment', comment_path(@recipe) %>

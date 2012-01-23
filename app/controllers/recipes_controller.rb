@@ -14,7 +14,8 @@ class RecipesController < ApplicationController
   # GET /recipes/1.json
   def show
     @recipe = Recipe.find(params[:id])
-
+    @comment = Comment.new(recipe_id: @recipe.id)
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @recipe }
@@ -25,6 +26,7 @@ class RecipesController < ApplicationController
   # GET /recipes/new.json
   def new
     @recipe = Recipe.new
+    3.times { @recipe.ingredients.build }
 
     respond_to do |format|
       format.html # new.html.erb

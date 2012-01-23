@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render 'layouts/menu' %>
+	<div class="topbar">
+      <div class="fill">
+        <div class="container">
+        <%= render 'layouts/menu' %>
+      </div>
+    </div>
+  </div>
 	<div class="container">
+	<h1><%= yield(:title) %> </h1>
+      <div class="content">
+        <div class="page-header">
 		<%= yield %>
 	</div>
 </body>
