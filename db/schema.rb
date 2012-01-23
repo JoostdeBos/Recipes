@@ -55,15 +55,6 @@ ActiveRecord::Schema.define(:version => 20120123141503) do
     t.integer  "category_id"
   end
 
-  create_table "items", :force => true do |t|
-    t.string   "name"
-    t.integer  "unit_id"
-    t.integer  "category_id"
-    t.integer  "calories"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "likes", :force => true do |t|
     t.integer  "post_id"
     t.integer  "user_id"
