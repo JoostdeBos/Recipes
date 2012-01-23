@@ -1,12 +1,12 @@
-Voeg een recept toe
-<%= semantic_form_for @recipe do |f| %>
+<p>Voeg een recept toe</p>
+<%= semantic_form_for @recipe, :html => { :class => 'form-stacked'} do |f| %>
    <%= f.inputs do %>
       <%= f.input :name, :label => "Naam" %>
       <%= f.input :instructions, :label => "Instructies",  :as => :text, :input_html => { :rows => 13 } %>
       <%= f.input :preperation_time, :label => "Bereidingstijd" %>
       <%= f.input :course, :label => "Menugang", :as => :select, :collection => ["Amuse", "Voorgerecht", "Hoofdgerecht", "Bijgerecht", "Lunch", "Ontbijt"] %>
     <% end %>
-      Voeg ingredienten toe:
+      <p>Voeg ingredienten toe:</p>
        <%= f.semantic_fields_for :ingredients do |i| %>
          <%= i.inputs do %>
            <div id="ingredients">
