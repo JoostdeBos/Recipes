@@ -1,12 +1,32 @@
-<p>Voeg een recept toe</p>
+
 <%= semantic_form_for @recipe, :html => { :class => 'form-stacked'} do |f| %>
-   <%= f.inputs do %>
-      <%= f.input :name, :label => "Naam" %>
-      <%= f.input :instructions, :label => "Instructies",  :as => :text, :input_html => { :rows => 13 } %>
-      <%= f.input :preperation_time, :label => "Bereidingstijd" %>
-      <%= f.input :course, :label => "Menugang", :as => :select, :collection => ["Amuse", "Voorgerecht", "Hoofdgerecht", "Bijgerecht", "Lunch", "Ontbijt"] %>
-    <% end %>
+<div class="row">
+  <div class="span5">
+  <p>Voeg een recept toe:</p>
+     <%= f.inputs do %>
+        <%= f.input :name, :label => "Naam" %>
+        <%= f.input :instructions, :label => "Instructies",  :as => :text,  :input_html => { :rows => 10, :cols => 60, :resize => 'none'} %>
+        <%= f.input :preperation_time, :label => "Bereidingstijd" %>
+        <%= f.input :course, :label => "Menugang", :as => :select, :collection => ["Amuse", "Voorgerecht", "Hoofdgerecht", "Bijgerecht", "Lunch", "Ontbijt"] %>
+      <% end %>
+  </div>
+  <div class="span4">
       <p>Voeg ingredienten toe:</p>
+       <%= f.semantic_fields_for :ingredients do |i| %>
+         <%= i.inputs do %>
+           <div id="ingredients">
+            <%= i.input :name, :label => "Naam", :html => { :class => 'small'} %>
+            <%= i.input :quantity, :label => "Hoeveelheid" %>
+           </div>
+          <% end %>
+        <% end %>
+
+           <%= link_to_function "Voeg ingredient toe", "addIngredient()" do |page| 
+            page.insert_html :bottom, :ingredients
+           end %>
+  </div>
+  <div class="span4">
+      <p>Voeg foto's toe</p>
        <%= f.semantic_fields_for :ingredients do |i| %>
          <%= i.inputs do %>
            <div id="ingredients">
@@ -19,6 +39,8 @@
            <%= link_to_function "Voeg ingredient toe", "addIngredient()" do |page| 
             page.insert_html :bottom, :ingredients
            end %>
+  </div>
+</div>
       <%= f.buttons do %>
         <%= f.commit_button :button_html => {:class => "primary"} %>
       <% end %>
