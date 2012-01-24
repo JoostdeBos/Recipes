@@ -1,7 +1,7 @@
-<%= semantic_form_for @comment, :html => {class: 'form-stacked'} do |f| %>
+<%= semantic_form_for @comment, :html => {class: 'form-stacked recipe-reply'} do |f| %>
   <%= f.semantic_errors %>
   <%= f.inputs do %>
-    <%= f.input :message, :as => :text, :input_html => { :rows => 3 } %>
+    <%= f.input :message, :as => :text, :input_html => { :rows => 3 }, :label => "Reageer op dit gerecht" %>
     <%= f.input :recipe_id, :as => :hidden %>
     <%= f.buttons do %>
         <%= f.commit_button :button_html => {:class => "primary"} %>

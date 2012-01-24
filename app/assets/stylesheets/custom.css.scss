@@ -1,5 +1,12 @@
 @import 'bootstrap';
 
+@mixin box-shadows {
+	-moz-box-shadow: 0px 5px 20px #888;
+ 	-webkit-box-shadow: 0px 5px 20px #888;
+ 	box-shadow: 0px 5px 20px #888;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); 	
+} 
+
 html, body {
 	padding-top: 40px;
 	background: transparent url(../images/bg.jpg) left top repeat;
@@ -67,10 +74,8 @@ html, body {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
-  -moz-box-shadow: 0px 5px 20px #888;
- 	-webkit-box-shadow: 0px 5px 20px #888;
- 	box-shadow: 0px 5px 20px #888;
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); 
+  border-top: thick solid #504848;
+  @include box-shadows;
 }
 
 /* Page header tweaks */
@@ -129,3 +134,27 @@ html, body {
 	color: lighten(#404040, 20);
 }
 
+.recipe-reply {
+	padding-left: 0px;
+}
+
+.actions {
+	background: transparent;
+	border: none;
+	margin-top: -15px;
+}
+
+h1 {
+	color: #504848;
+	text-shadow: #fff 1px 1px 0;
+	margin-bottom: 7px;
+	background-color: rgba(134, 165, 191, 0.5);
+	width: 840px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	margin-left: -20px;
+	margin-bottom: -5px;
+	margin-top: -40px;
+	padding-top: 40px;
+	@include box-shadows;
+}

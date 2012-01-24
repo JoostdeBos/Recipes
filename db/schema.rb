@@ -50,12 +50,6 @@ ActiveRecord::Schema.define(:version => 20120123141503) do
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
-  end
-
-  create_table "items", :force => true do |t|
-=======
->>>>>>> eaebb2b5c857ebce46b540531c0240f890588fb2
     t.string   "name"
     t.integer  "unit_id"
     t.integer  "category_id"
