@@ -1,5 +1,5 @@
 
-<%= semantic_form_for @recipe, :html => { :class => 'form-stacked'} do |f| %>
+<%= semantic_form_for @recipe, :html => { :class => 'form-stacked'}, :validate => true do |f| -%>
 <div class="row">
   <div class="span5">
   <p>Voeg een recept toe:</p>
@@ -12,18 +12,17 @@
   </div>
   <div class="span4">
       <p>Voeg ingredienten toe:</p>
-       <%= f.semantic_fields_for :ingredients do |i| %>
-         <%= i.inputs do %>
-           <div id="ingredients">
-            <%= i.input :name, :label => "Naam", :html => { :class => 'small'} %>
-            <%= i.input :quantity, :label => "Hoeveelheid" %>
-           </div>
-          <% end %>
-        <% end %>
+           <%= f.semantic_fields_for :ingredients do |i| %>
+             <%= i.inputs do %>
+               <%= render 'ingredients/form', :i => i %>
+             <% end %>
+            <% end %>
+
 
            <%= link_to_function "Voeg ingredient toe", "addIngredient()" do |page| 
             page.insert_html :bottom, :ingredients
            end %>
+
   </div>
   <div class="span4">
       <p>Voeg foto's toe</p>

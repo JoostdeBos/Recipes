@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+	<%= link_to image_tag(@recipe.post.user.picture_url, { :height => 35 }), @recipe.post.user %>
+	Recept door <b><%= link_to @recipe.post.user.name, @recipe.post.user %></b>
+</p>
+
+<p>
   <b>Name:</b>
   <%= @recipe.name %>
 </p>
@@ -20,16 +25,19 @@
   <%= @recipe.course %>
 </p>
 
-<% # Add message for logged in users %>
-<p>
-	<b>Bericht toevoegen:</b>
-</p>
-<%= render 'comments/form' %>
+<% if current_user %>
+	<p>
+		<b>Bericht toevoegen:</b>
+	</p>
+	<%= render 'comments/form' %>
+<% end %>
 
 <% # Listed comments %>
+<p>
+	<b>Comments:</b>
+</p>
 <%= render @recipe.comments.where('user_id IS NOT NULL') %>
 
 <% # Action links %>
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %> |
-<%= link_to 'Comment', comment_path(@recipe) %>
+<%= link_to 'Back', recipes_path %> 
