@@ -145,18 +145,18 @@ html, body {
 }
 
 h1 {
-	color: #FFF;
+	color: darken(#86A5BF, 30);
 	font-size: 3em;
-	text-shadow: darken(#FFF, 40) 1px 1px 0;
+	text-shadow: 1px 1px 0px lighten(#86A5BF, 20);
 	margin-bottom: 7px;
 	background-color: #86A5BF;
 	width: 840px;
 	padding-left: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	margin-left: -20px;
 	margin-bottom: -5px;
 	margin-top: -40px;
-	padding-top: 20px;
+	padding-top: 30px;
 	@include box-shadows;
 }
 
@@ -166,4 +166,9 @@ footer {
 
 .topbar-inner, .topbar, .fill {
 	background-color: #fff;
+}
+
+li {
+	font-size: 1.4em;
+	line-height: 24px;
 }

@@ -18,16 +18,13 @@
 
     <h2>Bereidingswijze</h2>
     <p><%= @recipe.instructions %></p>
-    <% if current_user %>
+  <% # Listed comments %>
+
+    <b>Reacties</b>
+  <%= render @recipe.comments %>
+   <% if current_user %>
     <%= render 'comments/form' %>
   <% end %>
-
-  <% # Listed comments %>
-  <p>
-    <b>Comments:</b>
-  </p>
-  <%= render @recipe.comments %>
-
   </div>
   <div class="span4">
   <h2>Ingredienten</h2>

@@ -1,6 +1,24 @@
+<% title 'Profiel' %>
 <% user = @user %>
-<%= image_tag user.picture_url, {:height => 60} %>
+<%= image_tag user.image_url, {:height => 60} %>
 <p>
 	<b>Name:</b>
 	<%= user.name %>
 </p>
+
+<h2>Volgt</h2>
+<ul>
+  <% @user.friendships.each do |friendship| %>
+    <li>
+      <%= link_to friendship.friend.name %>
+      <%= link_to "remove", friendship, :method => :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Gevolgd door</h2>
+<ul>
+  <% for user in @user.inverse_friends %>
+    <li><%= link_to user.name, user %></li>
+  <% end %>
+</ul>
