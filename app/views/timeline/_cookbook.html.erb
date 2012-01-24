@@ -1,8 +1,8 @@
 <%= link_to image_tag(item.post.user.picture_url, {:height => 45}), item.post.user %>
 <div class="update-content">
 	<div class="update-content-title">
-		<%= item.post.user.name %>
-		heeft het kookboek <%= link_to item.name, item %> toegevoegd
+		<%= link_to item.post.user.name %>
+		heeft het kookboek <%= link_to item.name, item %> toegevoegd <span class="update-time"><%= time_ago_in_words(item.created_at) %> ago</span>
 	</div>
 	<div class="update-content-text">
 		<%= item.description unless item.description.empty? %>

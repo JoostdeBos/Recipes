@@ -19,6 +19,8 @@ gem "formtastic"
 
 gem "formtastic-bootstrap", "~> 1.1.2"
 
+gem 'client_side_validations'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

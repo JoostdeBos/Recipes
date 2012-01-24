@@ -3,7 +3,7 @@
 	<div class="update-content-title">
 		<%= link_to item.user.name, item.user %>
 		heeft gereageerd op het recept <%= link_to item.recipe.name.truncate(20), item.recipe %> van
-		<%= link_to item.recipe.post.user.name, item.recipe.post.user %> <span class="time"><%= time_ago_in_words(item.created_at) %> ago</span>
+		<%= link_to item.recipe.post.user.name, item.recipe.post.user %> <span class="update-time"><%= time_ago_in_words(item.created_at) %> ago</span>
 	</div>
 	<div class="update-content-text">
 		<%= item.message %>
