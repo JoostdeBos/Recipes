@@ -1,6 +1,6 @@
 <div class="comment" data-time="<%= comment.created_at.to_i %>">
   <%= link_to image_tag(comment.user.picture_url, {:height => 35}), comment.user %>
   <b><%= link_to comment.user.name, comment.user %></b>
-  <em>on <%= comment.created_at.strftime('%b %d, %Y at %I:%M %p') %></em>
-  <%= simple_format comment.message %>
+  <em>on <%= comment.created_at.strftime('%b %d, %Y at %I:%M %p') %></em><br />
+  <%= best_in_place comment, :message, type: :textarea %>
 </div>

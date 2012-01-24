@@ -46,6 +46,9 @@ GEM
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
+    best_in_place (1.0.5)
+      jquery-rails
+      rails (~> 3.1)
     builder (3.0.0)
     client_side_validations (3.1.4)
     coffee-rails (3.1.1)
@@ -158,6 +161,7 @@ DEPENDENCIES
   acts_as_relation
   anjlab-bootstrap-rails
   bcrypt-ruby (~> 3.0.0)
+  best_in_place
   client_side_validations
   coffee-rails (~> 3.1.1)
   formtastic

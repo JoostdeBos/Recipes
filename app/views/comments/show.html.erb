@@ -1,20 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Comment:</b>
-  <%= @comment.comment %>
+	<%= link_to image_tag(@comment.user.picture_url, {:height => 35}), @comment.user %><br />
+	<%= link_to @comment.user.name, @comment.user %>
 </p>
 
 <p>
-  <b>Post:</b>
-  <%= @comment.post.id %>
+  <%= best_in_place @comment, :message, {type: :textarea} %>
 </p>
-
-<p>
-  <b>User:</b>
-  <%= @comment.user_id %>
-</p>
-
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
