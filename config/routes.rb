@@ -37,7 +37,7 @@ Recepten::Application.routes.draw do
   match "/signin" => "sessions#new", :as => :signin
 
   # Comments
-  match "/comment/:recipe/" => "comments#new", :as => :comment
+  #match "/comment/:recipe/" => "comments#new", :as => :comment
   # We need to be able to edit or delete a comment as well.
 
   # Root
