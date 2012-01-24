@@ -1,9 +1,10 @@
-<% unless item.post.user.nil? %>
-	<p>
-		<b><%= item.post.user.name %></b>
-		heeft een nieuw recept toegevoegd
-	</p>
-	<p style="padding-left: 10px">
-		<%= item.name %>
-	</p>
-<% end %>
+<%= link_to image_tag(item.post.user.picture_url, {:height => 45}), item.post.user %>
+<div class="update-content">
+	<div class="update-content-title">
+		<%= link_to item.post.user.name, item.post.user %> heeft een nieuw recept toegevoegd <span class="update-time"><%= time_ago_in_words(item.created_at) %> ago</span>
+	</div>
+	<div class="update-content-text">
+	<%= link_to item.name, item %> <br />
+		<%= item.description.truncate(200) unless item.description.nil? %>
+	</div>
+</div>

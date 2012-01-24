@@ -1,4 +1,7 @@
 class RecipesController < ApplicationController
+  before_filter :login_required, :except => [:index, :show]
+  before_filter :current_user, :only => [:edit, :update]
+
   # GET /recipes
   # GET /recipes.json
   def index
@@ -26,7 +29,8 @@ class RecipesController < ApplicationController
   # GET /recipes/new.json
   def new
     @recipe = Recipe.new
-    #3.times { @recipe.ingredients.build }
+    @ingredient = Ingredient.new(:recipe_id => @recipe.id)
+    3.times {@recipe.ingredients.build}
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,6 +47,7 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(params[:recipe])
+    @recipe.user_id = current_user.id
 
     respond_to do |format|
       if @recipe.save
@@ -59,6 +64,8 @@ class RecipesController < ApplicationController
   # PUT /recipes/1.json
   def update
     @recipe = Recipe.find(params[:id])
+    @recipe.user_id = current_user.id
+    @recipe.description = @recipe.instructions.truncate(200)
 
     respond_to do |format|
       if @recipe.update_attributes(params[:recipe])

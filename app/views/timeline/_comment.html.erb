@@ -1,10 +1,11 @@
-<% unless item.user.nil? %>
-	<p>
-		<b><%= item.user.name.capitalize %></b>
-		heeft gereageerd op het recept <i><%= item.recipe.name %></i> van
-		<b><%= item.recipe.post.user.name.capitalize %></b>
-	</p>
-	<p style="padding-left: 10px;">
+<%= link_to image_tag(item.user.picture_url, {:height => 45}), item.user %>
+<div class="update-content">
+	<div class="update-content-title">
+		<%= link_to item.user.name, item.user %>
+		heeft gereageerd op het recept <%= link_to item.recipe.name.truncate(20), item.recipe %> van
+		<%= link_to item.recipe.post.user.name, item.recipe.post.user %> <span class="update-time"><%= time_ago_in_words(item.created_at) %> ago</span>
+	</div>
+	<div class="update-content-text">
 		<%= item.message %>
-	</p>
-<% end %>
+	</div>
+</div>

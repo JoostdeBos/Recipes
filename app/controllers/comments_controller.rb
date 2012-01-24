@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_filter :authenticate, :only => :create
   # GET /comments
   # GET /comments.json
   def index
@@ -41,6 +42,7 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(params[:comment])
+    @comment.user_id = current_user.id
 
     if @comment.save
       flash[:notice] = "Successfully created comment."

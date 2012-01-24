@@ -99,3 +99,33 @@ html, body {
   border-color: #FBC7C6;
   display: table;
 }
+
+
+.update {
+	background-color: lighten(#86A5BF, 30);
+	padding: 10px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	min-height: 60px;
+}
+
+.update-content {
+	padding-left: 60px;
+	margin-top: -52px;
+}
+
+.update-content a {
+	font-weight: bold;
+}
+
+.update-content-text {
+	padding-top: 5px;
+}
+
+.update-time {
+	font-size: 80%;
+	color: lighten(#404040, 20);
+}
+
