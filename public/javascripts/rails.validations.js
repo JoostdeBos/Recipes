@@ -402,4 +402,3 @@ var clientSideValidations = {
     }
   }
 }
-clientSideValidations.formBuilders['Formtastic::SemanticFormBuilder'] = clientSideValidations.formBuilders['Formtastic::FormBuilder']
