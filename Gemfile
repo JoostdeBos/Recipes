@@ -19,7 +19,7 @@ gem "formtastic"
 
 gem "formtastic-bootstrap", "~> 1.1.2"
 
-gem 'client_side_validations'
+gem 'client_side_validations', :git => 'git://github.com/bcardarella/client_side_validations.git'
 
 # Gems used only for assets and not required
 # in production environments by default.

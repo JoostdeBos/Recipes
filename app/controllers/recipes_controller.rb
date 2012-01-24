@@ -1,4 +1,7 @@
 class RecipesController < ApplicationController
+  before_filter :login_required, :except => [:index, :show]
+  before_filter :current_user, :only => [:edit, :update]
+
   # GET /recipes
   # GET /recipes.json
   def index

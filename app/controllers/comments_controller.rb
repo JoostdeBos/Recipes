@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
-  before_filter :authenticate, :only => :create
+  before_filter :login_required, :except => [:index, :show]
+  before_filter :authorize, :only  => [:edit, :update, :destroy]
+
   # GET /comments
   # GET /comments.json
   def index
@@ -78,5 +80,13 @@ class CommentsController < ApplicationController
       format.html { redirect_to comments_url }
       format.json { head :ok }
     end
+  end
+
+  def authorize
+    @comment = Comment.find(params[:id])
+    unless @comment.user_id == current_user.id
+      flash[:alert] = "Mind your own!"
+      redirect_to root_path
+    end 
   end
 end
