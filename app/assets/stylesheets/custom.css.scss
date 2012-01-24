@@ -74,7 +74,7 @@ html, body {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
-  border-top: thick solid #504848;
+  // border-top: thick solid #674E49;
   @include box-shadows;
 }
 
@@ -145,16 +145,25 @@ html, body {
 }
 
 h1 {
-	color: #504848;
-	text-shadow: #fff 1px 1px 0;
+	color: #FFF;
+	font-size: 3em;
+	text-shadow: darken(#FFF, 40) 1px 1px 0;
 	margin-bottom: 7px;
-	background-color: rgba(134, 165, 191, 0.5);
+	background-color: #86A5BF;
 	width: 840px;
 	padding-left: 20px;
 	padding-bottom: 20px;
 	margin-left: -20px;
 	margin-bottom: -5px;
 	margin-top: -40px;
-	padding-top: 40px;
+	padding-top: 20px;
 	@include box-shadows;
+}
+
+footer {
+	background-color: #8D695D;
+}
+
+.topbar-inner, .topbar, .fill {
+	background-color: #fff;
 }

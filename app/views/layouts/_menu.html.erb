@@ -7,7 +7,7 @@
 	           <!-- Menu items hier -->
 	          </ul>
 	          <h2 class="current-user">
-		          <%= image_tag current_user.picture_url, {:height => 24} %>
+		          <%= image_tag current_user.image_url, {:height => 24} %>
 		          <span class="name">
 			          Ingelogd als <%= current_user.name %>
 		          	(<%= link_to "Log uit", signout_path %>)
