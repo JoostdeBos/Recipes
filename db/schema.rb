@@ -50,6 +50,12 @@ ActiveRecord::Schema.define(:version => 20120123141503) do
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
+  end
+
+  create_table "items", :force => true do |t|
+=======
+>>>>>>> eaebb2b5c857ebce46b540531c0240f890588fb2
     t.string   "name"
     t.integer  "unit_id"
     t.integer  "category_id"
@@ -78,11 +84,11 @@ ActiveRecord::Schema.define(:version => 20120123141503) do
   end
 
   create_table "recipe_pictures", :force => true do |t|
-    t.string   "url"
     t.integer  "recipe_id"
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "recipes", :force => true do |t|

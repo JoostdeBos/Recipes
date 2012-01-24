@@ -19,7 +19,13 @@ gem "formtastic"
 
 gem "formtastic-bootstrap", "~> 1.1.2"
 
+<<<<<<< HEAD
+gem 'carrierwave' #https://github.com/jnicklas/carrierwave
+
+gem 'rmagick'
+=======
 gem 'client_side_validations', :git => 'git://github.com/bcardarella/client_side_validations.git'
+>>>>>>> eaebb2b5c857ebce46b540531c0240f890588fb2
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -49,3 +55,7 @@ group :test do
 end
 
 gem 'acts_as_relation'
+
+gem 'execjs'
+
+gem 'therubyracer'
