@@ -1,3 +1,5 @@
+@import 'bootstrap';
+
 html, body {
 	padding-top: 40px;
 	background: transparent url(../images/bg.jpg) left top repeat;
@@ -11,8 +13,6 @@ html, body {
 	background-clip: initial;
 	background-color: transparent;
 }
-
-@import 'bootstrap';
 
 
 .topbar h2 {

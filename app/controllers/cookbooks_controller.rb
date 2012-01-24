@@ -41,6 +41,7 @@ class CookbooksController < ApplicationController
   # POST /cookbooks.json
   def create
     @cookbook = Cookbook.new(params[:cookbook])
+    @cookbook.user_id = current_user.id
 
     respond_to do |format|
       if @cookbook.save
@@ -57,6 +58,7 @@ class CookbooksController < ApplicationController
   # PUT /cookbooks/1.json
   def update
     @cookbook = Cookbook.find(params[:id])
+    @cookbook.user_id = current_user.id
 
     respond_to do |format|
       if @cookbook.update_attributes(params[:cookbook])

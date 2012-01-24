@@ -44,6 +44,7 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(params[:recipe])
+    @recipe.user_id = current_user.id
 
     respond_to do |format|
       if @recipe.save
@@ -60,6 +61,8 @@ class RecipesController < ApplicationController
   # PUT /recipes/1.json
   def update
     @recipe = Recipe.find(params[:id])
+    @recipe.user_id = current_user.id
+    @recipe.description = @recipe.instructions.truncate(200)
 
     respond_to do |format|
       if @recipe.update_attributes(params[:recipe])
