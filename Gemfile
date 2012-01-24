@@ -49,3 +49,7 @@ group :test do
 end
 
 gem 'acts_as_relation'
+
+gem 'execjs'
+
+gem 'therubyracer'
