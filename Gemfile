@@ -23,6 +23,8 @@ gem 'carrierwave' #https://github.com/jnicklas/carrierwave
 
 gem 'rmagick'
 
+gem 'sunspot_rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
