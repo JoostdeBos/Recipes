@@ -18,7 +18,7 @@
 <%= title 'Inloggen' %>
 <div class="span6">
   <div class="auth_providers">
-   <p><strong>Sign in through one of these services:</strong></p>
+   <p><strong>Log in met behulp van de volgende diensten:</strong></p>
     <a href="/auth/twitter" class="auth_provider">
       <%= image_tag "twitter_64.png", size: "64x64", alt: "Twitter" %>
     </a>
@@ -31,12 +31,12 @@
       <div class="span8">
       <div class="input_fields">
       <p>
-        <strong>Don't use these services?</strong>
-        <%= link_to "Create an account", new_identity_path %> or login below.
+        <strong>Gebruik je geen Twitter of Facebook?</strong>
+        <%= link_to "Registreer je nu", new_identity_path %> of login:
       </p>
       <div class="fieldsin">
         <%= form_tag "/auth/identity/callback", :class => 'form-stacked' do %>
-          <%= label_tag :auth_key, "Email" %>
+          <%= label_tag :auth_key, "E-mail" %>
           <%= text_field_tag :auth_key %>
           <%= label_tag :password %>
           <%= password_field_tag :password %>
