@@ -2,5 +2,6 @@
   <%= i.input :name, :label => "Naam", :input_html => { :class => 'small'} %>
   <%= i.input :quantity, :label => "Hoeveelheid", :input_html => { :class => 'mini'} %>
   <%= i.input :_destroy, :as => :hidden %>
-  <%= link_to_function "verwijder", "remove_fields(this)" %>
+  <a class="remove-fields" href="#">remove</a>
+
  </div>
