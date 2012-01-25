@@ -9,4 +9,8 @@ class UsersController < ApplicationController
       format.json { render json: @user }
     end
   end
+
+  def index
+  	@users = User.all
+  end
 end

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -44,3 +45,46 @@
 </p>
 
 <%= render @recipe.comments.where('user_id IS NOT NULL') %>
+=======
+<%= title @recipe.name %>
+<div class="row">
+  <div class="span10">
+  <p>
+  	<%= link_to image_tag(@recipe.post.user.image_url, { :height => 35 }), @recipe.post.user %>
+  	Recept door <b><%= link_to @recipe.post.user.name, @recipe.post.user %></b>
+  </p>
+
+  <p>
+    <b>Bereidings tijd:</b>
+    <%= @recipe.preperation_time %> minuten
+  </p>
+
+  <p>
+    <b>Soort gerecht:</b>
+    <%= @recipe.course %>
+  </p>
+
+    <h2>Bereidingswijze</h2>
+    <p><%= @recipe.instructions %></p>
+  <% # Listed comments %>
+
+    <b>Reacties</b>
+  <%= render @recipe.comments %>
+   <% if current_user %>
+    <%= render 'comments/form' %>
+  <% end %>
+  </div>
+  <div class="span4">
+  <h2>Ingredienten</h2>
+  <% if !@recipe.ingredients.blank? %>
+  <ul>
+    <% for ingredient in @recipe.ingredients %>
+    <li><%= ingredient.name %> (<%= ingredient.quantity %>) </li>
+    <% end %>
+  </ul>
+  <% else %>
+    <p>Geen ingredienten toegevoegd</p>
+  <% end %>
+  </div>
+</row>
+>>>>>>> ad6ff526f09b209bd3d3f746093fe2a395a6d0a1
