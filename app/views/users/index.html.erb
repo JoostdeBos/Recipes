@@ -1,0 +1,16 @@
+<% title 'Gebruikers' %>
+<div id="users">  
+  <% @users.each do |user| %>  
+<div id="user">  
+      <%  if user != current_user %>  
+        <%= link_to user.name, user %> 
+        <% if current_user.friends.exists?(user) %>
+        	(already a friend)
+        <% else %>
+        	(<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>)
+       	<% end %>
+      <% end %>  
+    </div>  
+  
+  <% end %>  
+</div>

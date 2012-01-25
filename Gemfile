@@ -24,6 +24,11 @@ gem 'carrierwave' #https://github.com/jnicklas/carrierwave
 gem 'rmagick'
 
 gem 'client_side_validations', :git => 'git://github.com/bcardarella/client_side_validations.git'
+<<<<<<< HEAD
+=======
+
+gem 'tire'
+>>>>>>> ad6ff526f09b209bd3d3f746093fe2a395a6d0a1
 
 # Gems used only for assets and not required
 # in production environments by default.

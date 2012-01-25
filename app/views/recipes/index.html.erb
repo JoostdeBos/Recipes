@@ -1,28 +1,16 @@
 <%= title "Listing Recipes" %>
-
-<table>
-  <tr>
-    <th>Recipe</th>
-    <th>Ingredient</th>
-    <th>Quantity</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= form_tag recipes_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search", name: nil %>
+  </p>
+<% end %>
 
 <% @recipes.each do |recipe| %>
-  <tr>
-    <td><%= recipe.name %></td>
-    <td><%= recipe.preperation_time %></td>
-    <td><%= recipe.instructions %></td>
-    <td><%= recipe.course %></td>
-    <td><%= link_to 'Show', recipe %></td>
-    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-    <td><%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+  <div class="update">
+    <%= render 'recipe', :item => recipe %>
+  </div>
 <% end %>
-</table>
-
 <br />
 
 <%= link_to 'New Recipe', new_recipe_path %>
