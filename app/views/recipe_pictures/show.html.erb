@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Url:</b>
-  <%= @recipe_picture.url %>
+  <b>Foto:</b>
+  <%= image_tag @recipe_picture.image_url(:thumb).to_s %>
 </p>
 
 <p>
