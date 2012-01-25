@@ -21,6 +21,23 @@ html, body {
 	background-color: transparent;
 }
 
+.auth_providers {
+	margin-left: 10px;
+}
+
+.input_fields {
+	margin-top:2px;
+	margin-right: 10px;
+	margin-left:30px;
+}
+
+.fieldsin {
+	margin-left:-20px;
+}
+
+.loginfield {
+	margin-top:10px;
+}
 
 .topbar h2 {
 	margin: 0;
@@ -175,5 +192,5 @@ footer {
 li {
 	font-size: 1.4em;
 	line-height: 24px;
-}
 
+}

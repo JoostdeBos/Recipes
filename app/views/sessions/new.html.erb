@@ -1,5 +1,6 @@
-<% if current_user %>
-  <h1>User Profile</h1>
+<div class="row">
+  <% if current_user %>
+  <%= title 'Profiel' %>
   <p>
     <strong>Name:</strong>
     <%= current_user.name %>
@@ -14,35 +15,35 @@
   </p>
   <p><%= link_to "Log out", signout_path %></p>
 <% else %>
-  <h1>Sign In</h1>
-
-  <p><strong>Sign in through one of these services:</strong></p>
-
+<%= title 'Inloggen' %>
+<div class="span6">
   <div class="auth_providers">
+   <p><strong>Log in met behulp van de volgende diensten:</strong></p>
     <a href="/auth/twitter" class="auth_provider">
       <%= image_tag "twitter_64.png", size: "64x64", alt: "Twitter" %>
-      Twitter
     </a>
     <a href="/auth/facebook" class="auth_provider">
       <%= image_tag "facebook_64.png", size: "64x64", alt: "Facebook" %>
-      Facebook
     </a>
   </div>
+</div>
   
-  <p>
-    <strong>Don't use these services?</strong>
-    <%= link_to "Create an account", new_identity_path %> or login below.
-  </p>
-  
-  <%= form_tag "/auth/identity/callback" do %>
-    <div class="field">
-      <%= label_tag :auth_key, "Email" %><br>
-      <%= text_field_tag :auth_key %>
-    </div>
-    <div class="field">
-      <%= label_tag :password %><br>
-      <%= password_field_tag :password %>
-    </div>
-    <div class="actions"><%= submit_tag "Login" %></div>
-  <% end %>
+      <div class="span8">
+      <div class="input_fields">
+      <p>
+        <strong>Gebruik je geen Twitter of Facebook?</strong>
+        <%= link_to "Registreer je nu", new_identity_path %> of login:
+      </p>
+      <div class="fieldsin">
+        <%= form_tag "/auth/identity/callback", :class => 'form-stacked' do %>
+          <%= label_tag :auth_key, "E-mail" %>
+          <%= text_field_tag :auth_key %>
+          <%= label_tag :password %>
+          <%= password_field_tag :password %>
+          <div class="loginfield">
+            <%= submit_tag "Login" %> 
+          </div>
+      </div>
+      <% end %>
 <% end %>
+</div>
