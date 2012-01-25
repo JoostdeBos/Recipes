@@ -5,7 +5,11 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    if params[:query].present?
+      @recipes = Recipe.search(params)
+    else
+      @recipes = Recipe.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
