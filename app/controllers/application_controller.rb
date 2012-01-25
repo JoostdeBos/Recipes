@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-	include ControllerAuthentication
+include ControllerAuthentication
   protect_from_forgery
   helper_method :current_user
 

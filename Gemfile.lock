@@ -169,15 +169,11 @@ DEPENDENCIES
   acts_as_relation
   anjlab-bootstrap-rails
   bcrypt-ruby (~> 3.0.0)
-<<<<<<< HEAD
   carrierwave
-  coffee-rails (~> 3.1.1)
-  execjs
-=======
   client_side_validations!
   coffee-rails (~> 3.1.1)
+  execjs
   formtastic
->>>>>>> eaebb2b5c857ebce46b540531c0240f890588fb2
   formtastic-bootstrap (~> 1.1.2)
   jquery-rails
   omniauth-facebook
