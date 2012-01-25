@@ -1,10 +1,4 @@
 <%= title "Listing Recipes" %>
-<%= form_tag recipes_path, method: :get do %>
-  <p>
-    <%= text_field_tag :query, params[:query] %>
-    <%= submit_tag "Search", name: nil %>
-  </p>
-<% end %>
 
 <% @recipes.each do |recipe| %>
   <div class="update">

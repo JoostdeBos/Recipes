@@ -5,7 +5,6 @@
 // the compiled file.
 //
 //= require jquery
-//= require rails.validations
 //= require jquery_ujs
 //= require jquery.purr
 //= require best_in_place

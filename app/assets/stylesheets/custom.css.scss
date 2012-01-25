@@ -160,6 +160,10 @@ h1 {
 	@include box-shadows;
 }
 
+h2, h3, h4, h5, h6 {
+	color: #504848;
+}
+
 footer {
 	background-color: #8D695D;
 }
@@ -172,3 +176,4 @@ li {
 	font-size: 1.4em;
 	line-height: 24px;
 }
+

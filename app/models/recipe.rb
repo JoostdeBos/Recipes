@@ -9,13 +9,4 @@ class Recipe < ActiveRecord::Base
  	validates :instructions, :presence => :true
  	validates :preperation_time, :presence => :true
  	validates :preperation_time, :numericality => { :only_integer => true }
-
- 	include Tire::Model::Search
-	include Tire::Model::Callbacks
-
-	def self.search(params)
-	  tire.search(load: true) do
-	    query { string params[:query], default_operator: "AND" } if params[:query].present?
-	  end
-	end
 end
