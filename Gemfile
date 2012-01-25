@@ -56,6 +56,8 @@ end
 
 gem 'acts_as_relation'
 
+gem 'best_in_place'
+
 gem 'execjs'
 
 gem 'therubyracer'
