@@ -57,7 +57,7 @@ class RecipePicturesController < ApplicationController
   # PUT /recipe_pictures/1
   # PUT /recipe_pictures/1.json
   def update
-    @recipe_picture = RecipePicture.find(params[:id])
+    @recipe_picture = RecipePicture.find(params[:id]
 
     respond_to do |format|
       if @recipe_picture.update_attributes(params[:recipe_picture])
