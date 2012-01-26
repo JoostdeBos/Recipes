@@ -9,4 +9,12 @@ class Recipe < ActiveRecord::Base
  	validates :instructions, :presence => :true
  	validates :preperation_time, :presence => :true
  	validates :preperation_time, :numericality => { :only_integer => true }
+
+ 	searchable do
+ 		text :name, boost: 5
+ 		text :description, :instructions
+ 		text :comments do
+ 			comments.map(&:message)
+ 		end
+ 	end
 end

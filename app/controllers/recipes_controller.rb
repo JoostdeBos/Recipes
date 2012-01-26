@@ -5,7 +5,11 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    @search = Recipe.search do
+      fulltext params[:search]
+      paginate :page => params[:page], :per_page => 20
+    end
+    @recipes = @search.results
 
     respond_to do |format|
       format.html # index.html.erb

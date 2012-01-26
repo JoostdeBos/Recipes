@@ -23,7 +23,13 @@ gem 'carrierwave' #https://github.com/jnicklas/carrierwave
 
 gem 'rmagick'
 
+gem 'sunspot_solr'
+
 gem 'sunspot_rails'
+
+gem 'kaminari'
+
+ gem "sunspot_with_kaminari", '~> 0.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
