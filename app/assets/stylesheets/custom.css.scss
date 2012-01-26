@@ -91,7 +91,7 @@ html, body {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
-  // border-top: thick solid #674E49;
+  margin-bottom: 50px;
   @include box-shadows;
 }
 
@@ -186,11 +186,20 @@ footer {
 }
 
 .topbar-inner, .topbar, .fill {
-	background-color: #fff;
+	background-color: darken(#504848, 10);
+	padding-left: 50px;
+	padding-right: 50px;
+	.nav {
+		text-align: center;
+	}
 }
 
 li {
 	font-size: 1.4em;
 	line-height: 24px;
 
+}
+
+.pagination li {
+	font-size: 1em;
 }
