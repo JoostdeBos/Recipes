@@ -1,19 +1,12 @@
 <%= title "Alle recepten" %>
 
-<%= form_tag recipes_path, :method => :get do %>
+<%= form_tag recipes_path, :method => :get, :id => "recipes_search" do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil, :class => 'btn primary' %>
   </p>
 <% end %>
 
-
-<% @recipes.each do |recipe| %>
-  <div class="update">
-    <%= render 'recipe', :item => recipe %>
-  </div>
-<% end %>
-<br />
-<%= paginate @recipes, :window => 1 %>
+<div id="recipes-index"><%= render 'recipes' %></div>
 
 <%= link_to 'New Recipe', new_recipe_path %>

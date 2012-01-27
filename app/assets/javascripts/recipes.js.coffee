@@ -2,4 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-addIngredient: ->
+$ ->
+  $("#recipes-index, #recipes-index .pagination a").live "click", ->
+    $.getScript @href
+    false
+
+  $("#recipes_search input").keyup ->
+  	$.get $("#recipes_search").attr("action"), $("#recipes_search").serialize(), null, "script"
+  	false

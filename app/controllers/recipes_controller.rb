@@ -7,14 +7,9 @@ class RecipesController < ApplicationController
   def index
     @search = Recipe.search do
       fulltext params[:search]
-      paginate :page => params[:page], :per_page => 10
+      paginate :page => params[:page], :per_page => 5
     end
     @recipes = @search.results
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @recipes }
-    end
   end
 
   # GET /recipes/1
