@@ -3,7 +3,8 @@
   <% @users.each do |user| %>  
 <div id="user">  
       <%  if user != current_user %>  
-        <%= link_to user.name, user %> 
+        <%= link_to user.name, user %>
+        <%= image_tag user.picture_url(:thumb).to_s %>
         <% if current_user.friends.exists?(user) %>
         	(already a friend)
         <% else %>

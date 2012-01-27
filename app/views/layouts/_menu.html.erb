@@ -12,7 +12,7 @@
 	       	 		<input type="text" placeholder="Search">
 	      		</form>
 	          <h2 class="current-user">
-		          <%= image_tag current_user.profimage_url(:thumb) %>
+		          <%= image_tag current_user.picture.url %>
 		          <span class="name">
 			          Ingelogd als <%= current_user.name %>
 		          	(<%= link_to "Log uit", signout_path %>)

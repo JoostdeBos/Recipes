@@ -1,6 +1,9 @@
 <% title 'Profiel' %>
 <% user = @user %>
-<%= image_tag @profile_picture.profimage_url(:ava).to_s if user.profimage? %>
+<%= image_tag user.picture.url(:ava).to_s %><br>
+<% if current_user == user %>
+<%= link_to 'Wijzig Profiel Foto', edit_user_path(@user) %>
+<% end %>
 <p>
 	<b>Naam:</b>
 	<%= user.name %>
@@ -22,5 +25,3 @@
     <li><%= link_to user.name, user %></li>
   <% end %>
 </ul>
-
-<%= link_to 'Wijzig Profiel Foto', edit_user_path(@user) %>
