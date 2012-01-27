@@ -12,7 +12,7 @@
 
 <% @recipe_pictures.each do |recipe_picture| %>
   <tr>
-    <td><%= image_tag recipe_picture.image_url(:thumb).to_s %></td>
+    <td><%= image_tag recipe_picture.image_url(:recpic).to_s %></td>
     <td><%= recipe_picture.recipe_id %></td>
     <td><%= recipe_picture.title %></td>
     <td><%= link_to 'Show', recipe_picture %></td>
