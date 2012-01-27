@@ -38,6 +38,8 @@ Recepten::Application.routes.draw do
   match "/signout" => "sessions#destroy", :as => :signout
   match "/signin" => "sessions#new", :as => :signin
 
+  match "/timeline" => 'timeline#index', :as => :timeline
+
   # Comments
   #match "/comment/:recipe/" => "comments#new", :as => :comment
   # We need to be able to edit or delete a comment as well.
