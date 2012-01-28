@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-    attr_accessible :user_id, :picture
+  attr_accessible :user_id, :profile_picture, :name
 	mount_uploader :picture, ImageUploader
 	has_many :friendships  
   has_many :friends, :through => :friendships
@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
 	has_many :comments
 
 	# Loads a default image for the user if none has been set. Use this method instead of picture_url
-	# def image_url
-	 #	self.picture.nil? ? 'image-unknown.jpg' : self.picture
-	# end
+	def image_url
+	 	self.profile_picture.nil? ? 'image-unknown.jpg' : self.profile_picture
+	end
 
 	def self.from_omniauth(auth)
 		find_by_provider_and_uid(auth["provider"], auth["uid"]) || create_with_omniauth(auth)
@@ -19,9 +19,9 @@ class User < ActiveRecord::Base
 	def self.create_with_omniauth(auth)
 	  create! do |user|
 	    user.provider = auth["provider"]
-		user.uid = auth["uid"]
-		user.name = auth["info"]["name"]
-		user.picture = auth["info"]["image"]
+			user.uid = auth["uid"]
+			user.name = auth["info"]["name"]
+			user.profile_picture = auth["info"]["image"]
 	  end
 	end
 

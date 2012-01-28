@@ -1,6 +1,6 @@
 <% title 'Profiel' %>
 <% user = @user %>
-<%= image_tag user.picture.url(:ava).to_s %><br>
+<%= image_tag user.image_url %><br>
 <% if current_user == user %>
 <%= link_to 'Wijzig Profiel Foto', edit_user_path(@user) %>
 <% end %>
