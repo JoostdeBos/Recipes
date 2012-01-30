@@ -2,7 +2,11 @@
   <% @users.each do |user| %>  
   <div id="user">  
         <%  if user != current_user %> 
+<<<<<<< HEAD
         <%= image_tag user.picture_url %> 
+=======
+        <%= image_tag user.image_url, {:height => 24}%> 
+>>>>>>> 960128c1e616d5fc53d1db8b553017797951ff54
           <%= link_to user.name, user %> 
           <% if current_user.friends.exists?(user) %>
           	(already a friend)

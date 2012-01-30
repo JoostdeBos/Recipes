@@ -1,6 +1,10 @@
 <% title 'Profiel' %>
 <% user = @user %>
+<<<<<<< HEAD
 <%= image_tag user.picture_url(:thumb) %><br>
+=======
+<%= image_tag user.image_url %><br>
+>>>>>>> 960128c1e616d5fc53d1db8b553017797951ff54
 <% if current_user == user %>
 <%= link_to 'Wijzig Profiel Foto', edit_user_path(@user) %>
 <% end %>
