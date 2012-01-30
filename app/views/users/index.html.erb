@@ -1,17 +1,9 @@
 <% title 'Gebruikers' %>
-<div id="users">  
-  <% @users.each do |user| %>  
-<div id="user">  
-      <%  if user != current_user %>  
-        <%= link_to user.name, user %>
-        <%= image_tag user.picture_url(:thumb).to_s %>
-        <% if current_user.friends.exists?(user) %>
-        	(already a friend)
-        <% else %>
-        	(<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>)
-       	<% end %>
-      <% end %>  
-    </div>  
-  
-  <% end %>  
-</div>
+<%= form_tag users_path, :method => :get, :id => "users_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil, :class => 'btn primary' %>
+  </p>
+<% end %>
+
+<div id="users-index"><%= render 'users' %></div>

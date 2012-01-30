@@ -1,0 +1,7 @@
+<% @recipes.each do |recipe| %>
+<div class="update">
+    <%= render 'recipe', :item => recipe %>
+  </div>
+<% end %>
+<br />
+<%= paginate @recipes, :window => 1 %>

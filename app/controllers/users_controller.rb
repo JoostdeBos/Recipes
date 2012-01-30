@@ -11,7 +11,11 @@ class UsersController < ApplicationController
   end
 
   def index
-  	@users = User.all
+  	@search = User.search do
+      fulltext params[:search]
+      paginate :page => params[:page], :per_page => 25
+    end
+    @users = @search.results
   end
 
   def edit

@@ -10,7 +10,7 @@ class Recipe < ActiveRecord::Base
  	validates :preperation_time, :presence => :true
  	validates :preperation_time, :numericality => { :only_integer => true }
 
- 	searchable do
+ 	searchable :auto_index => true, :auto_remove => true do 
  		text :name, boost: 5
  		text :description, :instructions
  		text :comments do
