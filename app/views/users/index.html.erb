@@ -1,5 +1,5 @@
 <% title 'Gebruikers' %>
-<%= form_tag users_path, :method => :get, :id => "users_search" do %>
+<%= form_tag users_path, :method => :get, :id => "users_search", :autocomplete => 'off'  do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil, :class => 'btn primary' %>
