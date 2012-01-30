@@ -1,8 +1,11 @@
 <% title 'Profiel' %>
 <% user = @user %>
-<%= image_tag user.image_url, {:height => 60} %>
+<%= image_tag user.image_url %><br>
+<% if current_user == user %>
+<%= link_to 'Wijzig Profiel Foto', edit_user_path(@user) %>
+<% end %>
 <p>
-	<b>Name:</b>
+	<b>Naam:</b>
 	<%= user.name %>
 </p>
 
