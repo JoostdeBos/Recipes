@@ -21,16 +21,6 @@ html, body {
 	background-color: transparent;
 }
 
-.auth_providers {
-	margin-left: 10px;
-}
-
-.input_fields {
-	margin-top:2px;
-	margin-right: 10px;
-	margin-left:30px;
-}
-
 .fieldsin {
 	margin-left:-20px;
 }
@@ -202,4 +192,24 @@ li {
 
 .pagination li {
 	font-size: 1em;
+}
+
+.auth_providers {
+	margin-left: 10px;
+}
+
+.input_fields {
+	margin-top:2px;
+	margin-right: 10px;
+	margin-left:30px;
+}
+
+.field {
+	margin-bottom:5px;
+}
+
+.logo {
+	position:fixed;
+	top:160px;
+	right:400px;
 }
