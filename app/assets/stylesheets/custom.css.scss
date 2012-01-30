@@ -64,7 +64,6 @@ html, body {
 	position: absolute;
 	left: 10px;
 	top: 7px;
-	width: 24px;
 	height: 24px;
 }
 
@@ -189,9 +188,6 @@ footer {
 	background-color: darken(#504848, 10);
 	padding-left: 50px;
 	padding-right: 50px;
-	.nav {
-		text-align: center;
-	}
 }
 
 li {
