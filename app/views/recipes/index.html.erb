@@ -1,6 +1,10 @@
 <%= title "Alle recepten" %>
 
+<<<<<<< HEAD
+<%= form_tag recipes_path, :method => :get, :id => "recipes_search" do %>
+=======
 <%= form_tag recipes_path, :method => :get, :id => "recipes_search", :autocomplete => 'off' do %>
+>>>>>>> 960128c1e616d5fc53d1db8b553017797951ff54
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil, :class => 'btn primary' %>
