@@ -11,7 +11,7 @@
 	       	 		<input type="text" placeholder="Zoeken">
 	      		</form>
 	          <h2 class="current-user">
-		          <%= image_tag current_user.image_url %>
+		          <%= link_to image_tag(current_user.image_url), current_user %>
 		          <span class="name">
 			          Ingelogd als <%= current_user.name %>
 		          	(<%= link_to "Log uit", signout_path %>)
@@ -21,11 +21,12 @@
 	      </div>
 		<% else %>
 		  		  <div class="topbar-inner">
-	          <a class="brand" href="#">Recepten</a>
+	          <a class="brand" href="#">imCooking</a>
 	          <ul class="nav">
 	          </ul>
 	          <h2 class="current-user">
-	          	<%= link_to 'Log in', signin_path %>
+	          	<%= link_to 'Inloggen', signin_path %>
+
 	          </h2>
 	        </div>
 	      </div>

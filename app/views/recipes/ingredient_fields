@@ -1,7 +1,0 @@
-<div class="ingredients">
-  <%= i.input :name, :label => "Naam", :input_html => { :class => 'small'} %>
-  <%= i.input :quantity, :label => "Hoeveelheid", :input_html => { :class => 'mini'} %>
-  <%= link_to_remove_fields "remove", i %>
-  <!-- <a class="remove-fields" href="#">remove</a> -->
-
- </div>

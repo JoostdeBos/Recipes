@@ -33,8 +33,6 @@ Recepten::Application.routes.draw do
 
   resources :friendships
 
-  resources :profile_picture
-
 
   # Logging in
   match "/auth/:provider/callback" => "sessions#create"
@@ -42,6 +40,7 @@ Recepten::Application.routes.draw do
   match "/signin" => "sessions#new", :as => :signin
 
   match "/timeline" => 'timeline#index', :as => :timeline
+  match "/" => "sessions#new", :as => :signin
 
   # Comments
   #match "/comment/:recipe/" => "comments#new", :as => :comment
