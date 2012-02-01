@@ -4,7 +4,7 @@
 		Toegevoegd door <%= link_to item.post.user.name, item.post.user %> <span class="update-time"><%= time_ago_in_words(item.created_at) %> ago</span>
 	</div>
 	<div class="update-content-text">
-	<%= link_to item.name, item %> <br />
+	<%= link_to item.name, item%> <br />
 		<%=  item.description.nil? ? item.instructions.truncate(200) : item.description.truncate(200) %>
 	</div>
 </div>
