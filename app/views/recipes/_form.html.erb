@@ -12,16 +12,15 @@
   </div>
   <div class="span4">
       <p>Voeg ingredienten toe:</p>
+      <div id="ingredients-fields">
            <%= f.semantic_fields_for :ingredients do |i| %>
-             <%= i.inputs do %>
-               <%= render 'ingredients/form', :i => i %>
-             <% end %>
+               <%= i.inputs do %>
+                 <%= render 'ingredients/form', :i => i %>
+               <% end %>
             <% end %>
+            </div>
+           <a class="add-ingredient-fields" href="#">add</a>
 
-
-           <%= link_to_function "Voeg ingredient toe", "addIngredient()" do |page| 
-            page.insert_html :bottom, :ingredients
-           end %>
 
   </div>
   <div class="span4">

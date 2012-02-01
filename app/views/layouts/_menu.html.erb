@@ -4,7 +4,6 @@
 		  <div class="topbar-inner">
 	          <%= link_to 'Recepten', root_path, {class: 'brand'} %>
 	          <ul class="nav">
-	          	<li><%= link_to 'Tijdlijn', timeline_path %></li>
 	          	<li><%= link_to 'Gebruikers', users_path %></li>
 	          	<li><%= link_to 'Recepten', recipes_path %></li>
 	          </ul>
@@ -22,11 +21,11 @@
 	      </div>
 		<% else %>
 		  		  <div class="topbar-inner">
-	          <a class="brand" href="#">Bootstrap</a>
+	          <a class="brand" href="#">Recepten</a>
 	          <ul class="nav">
 	          </ul>
 	          <h2 class="current-user">
-	          	<%= link_to 'Sign in', signin_path %>
+	          	<%= link_to 'Log in', signin_path %>
 	          </h2>
 	        </div>
 	      </div>
