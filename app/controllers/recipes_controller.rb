@@ -29,7 +29,7 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @ingredient = Ingredient.new(:recipe_id => @recipe.id)
-    3.times {@recipe.ingredients.build}
+    6.times {@recipe.ingredients.build}
 
     respond_to do |format|
       format.html # new.html.erb

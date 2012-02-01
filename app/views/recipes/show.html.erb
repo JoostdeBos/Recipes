@@ -31,7 +31,9 @@
   <% if !@recipe.ingredients.blank? %>
   <ul>
     <% for ingredient in @recipe.ingredients %>
-    <li><%= ingredient.name %> (<%= ingredient.quantity %>) </li>
+      <% if !ingredient.name.blank? %>
+        <li><%= ingredient.name %> (<%= ingredient.quantity %>) </li>
+      <% end %>
     <% end %>
   </ul>
   <% else %>

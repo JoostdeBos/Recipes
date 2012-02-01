@@ -5,6 +5,7 @@
   <p>Voeg een recept toe:</p>
      <%= f.inputs do %>
         <%= f.input :name, :label => "Naam" %>
+        <%= f.input :description, :label => "Uitgebreide beschrijving", :as => :text,  :input_html => { :rows => 10, :cols => 60, :resize => 'none'}%>
         <%= f.input :instructions, :label => "Instructies",  :as => :text,  :input_html => { :rows => 10, :cols => 60, :resize => 'none'} %>
         <%= f.input :preperation_time, :label => "Bereidingstijd" %>
         <%= f.input :course, :label => "Menugang", :as => :select, :collection => ["Amuse", "Voorgerecht", "Hoofdgerecht", "Bijgerecht", "Lunch", "Ontbijt"] %>
@@ -19,7 +20,7 @@
                <% end %>
             <% end %>
             </div>
-           <a class="add-ingredient-fields" href="#">add</a>
+          <!-- <a class="add-ingredient-fields" href="#">add</a> -->
 
 
   </div>
